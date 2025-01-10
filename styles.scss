@@ -62,11 +62,35 @@ section#about {
   }
 }
 
+section#tekkers {
+  border: 2px dotted black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // flex-flow: row wrap;
+    min-width: 5px;
+    min-height: 5px;
+    gap: 20px;
+    border: 2px dotted black;
+    img {
+      max-width: 40px;
+    }
+  }
+}
+
 footer {
   display: flex;
   justify-content: center;
   background-color: black;
   width: 100%;
+  margin: 50px 0px;
   p {
     color: white;
   }

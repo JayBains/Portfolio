@@ -60,11 +60,33 @@ section#about {
   object-fit: contain;
 }
 
+section#tekkers {
+  border: 2px dotted black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#tekkers .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 5px;
+  min-height: 5px;
+  gap: 20px;
+  border: 2px dotted black;
+}
+section#tekkers .icons img {
+  max-width: 40px;
+}
+
 footer {
   display: flex;
   justify-content: center;
   background-color: black;
   width: 100%;
+  margin: 50px 0px;
 }
 footer p {
   color: white;

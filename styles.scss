@@ -25,6 +25,7 @@ header {
   text-decoration: none;
   li:last-child {
     border: 1px solid black;
+    border-radius: 3px;
   }
 }
 
@@ -63,7 +64,6 @@ section#about {
 }
 
 section#tekkers {
-  border: 2px dotted black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,16 +71,23 @@ section#tekkers {
 
   .icons {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    // flex-flow: row wrap;
     min-width: 5px;
     min-height: 5px;
     gap: 20px;
-    border: 2px dotted black;
+    padding: 20px;
+
+    p {
+      display: flex;
+      justify-content: center;
+    }
+
     img {
-      max-width: 40px;
+      width: 40px;
+      height: 40px;
     }
   }
 }

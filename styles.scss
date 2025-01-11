@@ -38,6 +38,7 @@ a:hover,
 a:active {
   border: 1px solid white;
   border-radius: 30px;
+  scroll-behavior: smooth;
 }
 
 section#home,
@@ -127,4 +128,7 @@ footer {
 }
 
 @media only screen and (min-width: 601px) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

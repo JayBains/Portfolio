@@ -129,6 +129,15 @@ footer {
     height: 30px;
     width: 30px;
   }
+
+  svg path {
+    fill: black; /* Initial color */
+    transition: fill 0.3s; /* Smooth transition */
+  }
+
+  svg:hover path {
+    fill: #00e2c1; /* Color on hover */
+  }
 }
 
 @media only screen and (max-width: 600px) {

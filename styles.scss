@@ -25,10 +25,19 @@ header {
   list-style-type: none;
   gap: 10px;
   text-decoration: none;
-  li:last-child {
-    border: 1px solid black;
-    border-radius: 3px;
-  }
+}
+
+a:link,
+a:visited {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  border: 1px solid white;
+  border-radius: 30px;
 }
 
 section#home,
@@ -66,7 +75,7 @@ section#about {
   }
 }
 
-section#tekkers {
+section#skills {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,8 +127,4 @@ footer {
 }
 
 @media only screen and (min-width: 601px) {
-  // .tekkers {
-  //   padding: 0px 100px 0px 0px;
-  // }
-  // Doesnt work^
 }

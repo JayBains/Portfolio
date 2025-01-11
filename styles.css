@@ -26,9 +26,18 @@ header {
   gap: 10px;
   text-decoration: none;
 }
-.navbar li:last-child {
-  border: 1px solid black;
-  border-radius: 3px;
+
+a:link,
+a:visited {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  border: 1px solid white;
+  border-radius: 30px;
 }
 
 section#home,
@@ -66,13 +75,13 @@ section#about {
   border-radius: 30px;
 }
 
-section#tekkers {
+section#skills {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-section#tekkers .icons {
+section#skills .icons {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -82,11 +91,11 @@ section#tekkers .icons {
   gap: 20px;
   padding: 20px;
 }
-section#tekkers .icons p {
+section#skills .icons p {
   display: flex;
   justify-content: center;
 }
-section#tekkers .icons img {
+section#skills .icons img {
   width: 40px;
   height: 40px;
 }

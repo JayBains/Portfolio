@@ -50,9 +50,7 @@ section#about {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100vw;
-  padding: 0px 20px 5px 20px;
-  gap: 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .intro,
@@ -60,7 +58,6 @@ section#about {
   flex: 1 1 200px;
   padding: 20px;
   max-width: 600px;
-  font-size: 20px;
 }
 
 .image1,
@@ -69,8 +66,7 @@ section#about {
   justify-content: center;
   align-items: center;
   flex: 1 1 200px;
-  max-width: 700px;
-  margin: 10px;
+  max-width: 600px;
 }
 .image1 img,
 .image2 img {
@@ -84,6 +80,8 @@ section#skills {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  gap: 10px;
 }
 section#skills .icons {
   display: flex;
@@ -102,6 +100,32 @@ section#skills .icons p {
 section#skills .icons img {
   width: 40px;
   height: 40px;
+}
+
+section#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+}
+section#projects .grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+section#projects .grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  padding: 10px;
+  max-width: 600px;
+}
+section#projects img {
+  max-width: 300px;
+  border-radius: 30px;
+  aspect-ratio: 1;
+  width: 70%;
 }
 
 footer {
@@ -137,6 +161,10 @@ footer svg:hover path {
     visibility: hidden;
     display: none;
   }
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
   .image1 {
     visibility: hidden;
     display: none;
@@ -144,10 +172,16 @@ footer svg:hover path {
   section#about {
     flex-direction: column;
   }
+  .grid-container {
+    grid-template-columns: auto;
+  }
 }
 @media only screen and (min-width: 601px) {
   header {
     position: sticky;
     top: 0;
+  }
+  .grid-container {
+    grid-template-columns: auto auto;
   }
 }

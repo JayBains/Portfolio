@@ -141,6 +141,17 @@ section#projects .button {
   border-radius: 10px;
   cursor: pointer;
 }
+section#projects .button:link,
+section#projects .button:visited {
+  transition-property: color;
+  transition-property: border;
+  transition-duration: 0.5s;
+}
+section#projects .button:hover,
+section#projects .button:active {
+  color: #00e2c1;
+  border: 2px solid #00e2c1;
+}
 
 footer {
   display: flex;

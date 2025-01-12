@@ -147,6 +147,19 @@ section#projects {
     border-radius: 10px;
     cursor: pointer;
   }
+
+  .button:link,
+  .button:visited {
+    transition-property: color;
+    transition-property: border;
+    transition-duration: 0.5s;
+  }
+
+  .button:hover,
+  .button:active {
+    color: #00e2c1;
+    border: 2px solid #00e2c1;
+  }
 }
 
 footer {

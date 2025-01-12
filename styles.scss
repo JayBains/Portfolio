@@ -73,7 +73,7 @@ section#about {
   margin: 10px;
 
   img {
-    width: 90%;
+    max-width: 90%;
     object-fit: contain;
     border-radius: 30px;
   }
@@ -149,6 +149,10 @@ footer {
   .image1 {
     visibility: hidden;
     display: none;
+  }
+
+  section#about {
+    flex-direction: column;
   }
 }
 

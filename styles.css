@@ -12,7 +12,7 @@ body p {
   font-size: 20px;
 }
 
-header {
+.header {
   background-color: black;
   color: white;
   display: flex;
@@ -20,8 +20,7 @@ header {
   align-items: center;
   padding: 0px 30px 0px 30px;
 }
-
-.navbar {
+.header__navbar {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
@@ -182,7 +181,7 @@ footer svg:hover path {
 }
 
 @media only screen and (max-width: 700px) {
-  .navbar {
+  .header__navbar {
     visibility: hidden;
     display: none;
   }

@@ -89,7 +89,6 @@ section#skills {
 
   .icon-grid {
     display: grid;
-    gap: 30px;
     padding: 20px;
     font-weight: bold;
 
@@ -219,6 +218,7 @@ footer {
   .icon-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    gap: 30px;
   }
 
   .project-grid {
@@ -235,6 +235,7 @@ footer {
   .icon-grid {
     display: flex;
     grid-template-columns: auto auto auto auto auto auto auto auto;
+    gap: 10px;
   }
 
   .project-grid {

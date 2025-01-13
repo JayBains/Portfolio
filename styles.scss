@@ -87,26 +87,22 @@ section#skills {
   padding: 30px 20px 20px 20px;
   gap: 10px;
 
-  .icons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    min-width: 5px;
-    min-height: 5px;
+  .icon-grid {
+    display: grid;
     gap: 30px;
     padding: 20px;
+    font-weight: bold;
 
-    p {
+    div {
       display: flex;
-      justify-content: center;
-      font-size: 15px;
-      font-weight: bold;
+      flex-flow: column wrap;
+      align-items: center;
+      padding: 0px 10px;
     }
 
     img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
     }
   }
 }
@@ -118,7 +114,7 @@ section#projects {
   flex-direction: column;
   padding: 10px 20px 20px 20px;
 
-  .grid-container {
+  .project-grid {
     display: grid;
     gap: 10px;
     padding: 10px;
@@ -126,7 +122,7 @@ section#projects {
     padding: 10px 0px;
   }
 
-  .grid-container > div {
+  .project-grid > div {
     text-align: center;
     padding: 20px 0;
     padding: 10px;
@@ -200,7 +196,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .navbar {
     visibility: hidden;
     display: none;
@@ -220,18 +216,28 @@ footer {
     flex-direction: column;
   }
 
-  .grid-container {
+  .icon-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .project-grid {
     grid-template-columns: auto;
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
   header {
     position: sticky;
     top: 0;
   }
 
-  .grid-container {
+  .icon-grid {
+    display: flex;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+  }
+
+  .project-grid {
     grid-template-columns: auto auto;
   }
 }

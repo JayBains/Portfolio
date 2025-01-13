@@ -87,25 +87,21 @@ section#skills {
   padding: 30px 20px 20px 20px;
   gap: 10px;
 }
-section#skills .icons {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  min-width: 5px;
-  min-height: 5px;
+section#skills .icon-grid {
+  display: grid;
   gap: 30px;
   padding: 20px;
-}
-section#skills .icons p {
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
   font-weight: bold;
 }
-section#skills .icons img {
-  width: 40px;
-  height: 40px;
+section#skills .icon-grid div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 0px 10px;
+}
+section#skills .icon-grid img {
+  width: 50px;
+  height: 50px;
 }
 
 section#projects {
@@ -115,14 +111,14 @@ section#projects {
   flex-direction: column;
   padding: 10px 20px 20px 20px;
 }
-section#projects .grid-container {
+section#projects .project-grid {
   display: grid;
   gap: 10px;
   padding: 10px;
   row-gap: 50px;
   padding: 10px 0px;
 }
-section#projects .grid-container > div {
+section#projects .project-grid > div {
   text-align: center;
   padding: 20px 0;
   padding: 10px;
@@ -186,7 +182,7 @@ footer svg:hover path {
   fill: #00e2c1; /* Color on hover */
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .navbar {
     visibility: hidden;
     display: none;
@@ -202,16 +198,24 @@ footer svg:hover path {
   section#about {
     flex-direction: column;
   }
-  .grid-container {
+  .icon-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .project-grid {
     grid-template-columns: auto;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
   header {
     position: sticky;
     top: 0;
   }
-  .grid-container {
+  .icon-grid {
+    display: flex;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+  }
+  .project-grid {
     grid-template-columns: auto auto;
   }
 }

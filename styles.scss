@@ -88,14 +88,14 @@ section#skills {
 
   .icon-grid {
     display: grid;
-    padding: 20px;
+    // padding: 20px;
     font-weight: bold;
 
     div {
       display: flex;
       flex-flow: column wrap;
       align-items: center;
-      padding: 0px 10px;
+      padding: 0px 0px;
     }
 
     img {
@@ -217,7 +217,6 @@ footer {
   .icon-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 30px;
   }
 
   .project-grid {

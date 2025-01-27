@@ -2,6 +2,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a:link,
+a:visited {
+  color: white;
+  padding: 10px 12px;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+a:hover,
+a:active {
+  color: #00e2c1;
+}
+
 body {
   background-color: white;
   margin: 0;
@@ -28,26 +46,8 @@ body p {
   text-decoration: none;
 }
 
-a:link,
-a:visited {
-  color: white;
-  padding: 10px 12px;
-  text-decoration: none;
-  transition-property: color;
-  transition-duration: 0.5s;
-}
-
-a:hover,
-a:active {
-  color: #00e2c1;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section#home,
-section#about {
+.home,
+.about {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,30 +55,30 @@ section#about {
   flex-wrap: wrap;
   padding: 0px 20px 20px 20px;
 }
-
-.intro,
-.description {
+.home__intro,
+.home__description,
+.about__intro,
+.about__description {
   flex: 1 1 200px;
   padding: 20px;
   max-width: 600px;
 }
-
-.image1,
-.image2 {
+.home__image,
+.about__image {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1 1 200px;
   max-width: 600px;
 }
-.image1 img,
-.image2 img {
+.home img,
+.about img {
   max-width: 90%;
   object-fit: contain;
   border-radius: 30px;
 }
 
-section#skills {
+.skills {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,49 +86,46 @@ section#skills {
   padding: 30px 20px 20px 20px;
   gap: 10px;
 }
-section#skills .icon-grid {
+.skills__icon-grid {
   display: grid;
-  padding: 20px;
   font-weight: bold;
 }
-section#skills .icon-grid div {
+.skills__icon {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0px 0px;
 }
-section#skills .icon-grid img {
+.skills img {
   width: 50px;
   height: 50px;
 }
 
-section#projects {
+.projects {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 10px 20px 20px 20px;
 }
-section#projects .project-grid {
+.projects__grid {
   display: grid;
   gap: 10px;
-  padding: 10px;
   row-gap: 50px;
   padding: 10px 0px;
 }
-section#projects .project-grid > div {
+.projects__grid > div {
   text-align: center;
   padding: 20px 0;
-  padding: 10px;
   max-width: 600px;
 }
-section#projects img {
+.projects img {
   max-width: 400px;
   border-radius: 30px;
-  aspect-ratio: 1;
+  aspect-ratio: 4/3;
   width: 70%;
 }
-section#projects .button {
+.projects .button {
   border: 2px solid black;
   color: black;
   padding: 15px 32px;
@@ -140,14 +137,13 @@ section#projects .button {
   border-radius: 10px;
   cursor: pointer;
 }
-section#projects .button:link,
-section#projects .button:visited {
-  transition-property: color;
-  transition-property: border;
+.projects .button:link,
+.projects .button:visited {
+  transition-property: color, border;
   transition-duration: 0.5s;
 }
-section#projects .button:hover,
-section#projects .button:active {
+.projects .button:hover,
+.projects .button:active {
   color: #00e2c1;
   border: 2px solid #00e2c1;
 }
@@ -173,11 +169,11 @@ footer svg {
   width: 30px;
 }
 footer svg path {
-  fill: black; /* Initial color */
-  transition: fill 0.3s; /* Smooth transition */
+  fill: black;
+  transition: fill 0.3s;
 }
 footer svg:hover path {
-  fill: #00e2c1; /* Color on hover */
+  fill: #00e2c1;
 }
 
 @media only screen and (max-width: 700px) {
@@ -189,19 +185,18 @@ footer svg:hover path {
     display: flex;
     justify-content: center;
   }
-  .image1 {
+  .home__image {
     visibility: hidden;
     display: none;
   }
-  section#about {
+  .about {
     flex-direction: column;
   }
-  .icon-grid {
+  .skills__icon-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 30px;
+    grid-template-columns: repeat(4, auto);
   }
-  .project-grid {
+  .projects__grid {
     grid-template-columns: auto;
   }
 }
@@ -210,12 +205,12 @@ footer svg:hover path {
     position: sticky;
     top: 0;
   }
-  .icon-grid {
+  .skills__icon-grid {
     display: flex;
     grid-template-columns: auto auto auto auto auto auto auto auto;
-    gap: 10px;
+    gap: 40px;
   }
-  .project-grid {
+  .projects__grid {
     grid-template-columns: auto auto;
   }
 }
